@@ -1,0 +1,19 @@
+Server,Platform,Schedule,Backup Start Sequence,Backup Start Time,Storage,Media Set,Expiration ,Backup Selection
+wnet-ad05,Windows,Monthly Full,End of month,11:00pm,Any tape cartridge storage,Month Ends,Infinite,"C:\*.*, System State\*"
+wnet-ad05,Windows,Weekly Full,Friday,11:00pm,Local vRay Storage,n/a,2 week,"C:\*.*, System State\*"
+wnet-ad05,Windows,Daily Incremental,Daily,11:00pm,Local vRay Storage,n/a,1 week,"C:\*.*, System State\*"
+wnet-choco01,Windows,Weekly Full,Saturday,12:00am,WWP Robotic Library New,Full Backups Media Set,-,-
+wnet-choco01,Windows,Daily Incremental,Daily,6:00pm,WWP Robotic Library New,Incremental Backups Media Set,-,-
+wnet-choco01,Windows,Full Duplicate,After Full,-,WWP Robotic Library New,Duplication Job Media Set,7 years,-
+wnet-damdash,Windows,Monthly Full,End of month,1:00am,WWP Robotic Library New [1..40],Month Ends,Infinite,"C:\*.*, E:\*.*, F:\*.*, Shadow Copy Components\*, System State\*"
+wnet-damdash,Windows,Weekly,Saturday,1:00am,WWP Robotic Library New [41..80],Dalet,4 weeks,"C:\*.*, E:\*.*, F:\*.*, Shadow Copy Components\*, System State\*"
+wnet-damdash,Windows,Daily Incremental,Daily,1:00am,WWP Robotic Library New [41..80],Dalet,4 weeks,"C:\*.*, E:\*.*, F:\*.*, Shadow Copy Components\*, System State\*"
+wnet-daletsql,Windows,Daily Full,Daily,3:00am,WWP Robotic Library New [41..80],Dalet,4 weeks,"R:\Backups, MS SQL Server Instances\MSSQLSERVER"
+wnet-daletsql,Windows,Monthly Full,End of month,3:00am,WWP Robotic Library New [1..40],Month Ends,Infinite,"R:\Backups, MS SQL Server Instances\MSSQLSERVER"
+wnet-vray2,Windows,Daily Full,Daily,10:00pm,Any tape cartridge storage,Keep Data for 4 weeks,4 weeks,MS SQL Server Instances\BKUPEXEC
+ccure-srv,Windows,Weekly Full,Friday,8:30pm,Any tape cartridge storage,Keep Data for 4 weeks,4 weeks,"C:\*.*, D:\*.*"
+ccure-srv,Windows,Daily Incremental,Daily,8:30pm,Any tape cartridge storage,Keep Data for 4 weeks,4 weeks,"C:\*.*, D:\*.*"
+protrack,Linux,Daily Full,Daily,10:00pm,Local vRay Storage,n/a,10 days,\[ROOT]\*.*
+protrack,Linux,Monthly Full,End of month,10:00pm,WWP Robotic Library New [1..40],Month Ends,Infinite,\[ROOT]\*.*
+protrack,Linux,Full Duplicate,"Tuesday, Friday",1:30am,WWP Robotic Library New [41..80],Sweep to tape,4 weeks,\[ROOT]\*.*
+ta-db,Linux,Weekly Full,Monday,1:00am,WWP Robotic Library New [41..80],Team Approach,,\[ROOT]\*.*
